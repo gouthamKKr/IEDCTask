@@ -1,6 +1,7 @@
+
+#Calculator Functions
 def add(a,b):
     print(a+b)
-    
     
 def difference(a,b):
     print(a-b)
@@ -11,6 +12,8 @@ def multiply(a,b):
 def divide(a,b):
     print(a/b)
 
+
+#Armstrong number
 def Armstrong(n):
     n1=0;
     num=n
@@ -25,23 +28,27 @@ def Armstrong(n):
     
     else:
         print(n,"is not an armstrong number")
-
+        
+#Prime number
 def Prime(n):
-    i=-1;
-    while(++i<n/2):
+    flag=0
+    for i in range(2,n//2):
         if(n%i==0):
-            break
-    if(i<n/2):
-        print("\n",n,"is not a prime number")
+            flag=1
+    if(flag==1):
+        print(n,"is not a prime number")
     else:
-        print("\n",n,"is a prime number")
-
+        print(n,"is a prime number")
+        
+        
+#for checking odd and even
 def Oddeven(n):
     if(n%2==0):
-        print("\n",n,"is an even number")
+        print(n,"is an even number")
     else:
-        print("\n",n,"is an odd number")
+        print(n,"is an odd number")
 
+#Factorial
 def fact(n):
     if(n==1):
         return 1
@@ -49,13 +56,13 @@ def fact(n):
         return(n*fact(n-1))
         
 def Factorial(n):
-    print("\n Factorial of",n,"is",fact(n))
+    print("\nFactorial of",n,"is",fact(n))
     
 
-        
-def calculator():
+#Calculator
+def Calculator():
     a=int(input("\nEnter first number : "))
-    b=int(input("\nEnter second number : "))
+    b=int(input("Enter second number : "))
     op=input("Enter Operation: +,-,*,/ : ")
     if (op=="+"):
         add(a,b)
@@ -65,14 +72,16 @@ def calculator():
         divide(a,b)
     elif(op=="*"):
         multiply(a,b)
-
+        
+        
+#number fumctions
 def numfunc():
-    n=int(input("\nEnter a number"))
-    print("\nChoose your operation from below")
-    print("\n1. Armstrong number")
-    print("\n2. Prime or not")
-    print("\n3. Odd or Even")
-    print("\n4. Factorial")
+    n=int(input("Enter a number"))
+    print("Choose your operation from below")
+    print("1. Armstrong number")
+    print("2. Prime or not")
+    print("3. Odd or Even")
+    print("4. Factorial")
     choice=int(input(":-"))
     
     if(choice==1):
@@ -84,10 +93,11 @@ def numfunc():
     elif(choice==4):
         Factorial(n)
 
+#main
 while(True):
-    print("\n1. Binary Calculator\n")
-    print("2. Number functions\n")
-    print("3. Press any other key to exit\n")
+    print("\n1. Binary Calculator")
+    print("2. Number functions")
+    print("3. Press any other key to exit")
     choice=int(input("Enter your choice"))
     if(choice==1):
         Calculator()
