@@ -77,7 +77,7 @@ def Calculator():
 #number fumctions
 def numfunc():
     n=int(input("Enter a number"))
-    print("Choose your operation from below")
+    print("\nChoose your operation from below")
     print("1. Armstrong number")
     print("2. Prime or not")
     print("3. Odd or Even")
